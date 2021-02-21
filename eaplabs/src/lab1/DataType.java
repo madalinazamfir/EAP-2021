@@ -41,7 +41,7 @@ public class DataType {
 
 
 //        Tipuri de date:
-//            - primitive: byte, short, int, long, float, double, char, boolean, void;
+//            - primitive: byte, short, int, long, float, double, char, boolean;
 //            - compuse sau referinte: tablouri (Array), clase, interfete
         /*
         / tip de data / natura      / nr biti / valori posibile                                     /
