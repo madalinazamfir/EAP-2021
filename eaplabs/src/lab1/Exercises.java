@@ -1,7 +1,5 @@
 package lab1;
 
-import java.util.Random;
-import java.util.Scanner;
 
 public class Exercises {
 
