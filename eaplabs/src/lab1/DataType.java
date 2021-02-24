@@ -24,7 +24,7 @@ package lab1;
 
 
 public class DataType {
-
+    int camp;
 
     public static void main(String[] args) {
         // o variabila reprezinta o zona de memorie in care programatorul poate stoca informatii
@@ -35,9 +35,13 @@ public class DataType {
         // o variabila locala trebuie initializata inainte de folosire
 
         //ex: declarare varibila
+        int i1;
+        int i2, i3;
 
 
         // ex: initializare variabila
+        i1 = 10;
+
 
 
 //        Tipuri de date:
@@ -57,6 +61,45 @@ public class DataType {
 
         // !!! tipul de date char este perceput de compilator si JVM ca un intreg fara semn si chiar poate fi folosit ca atare. valori posibile: 0...65535
 
+        int i7= 10;
+        int i4= 054; // baza 8
+        int i5= 0XFF; // baza 16
+        int i6 = 0b11010;
+        System.out.println(i4);
+        System.out.println(i5);
+        System.out.println(i6);
+
+        long l1 = 123_456_789;
+        System.out.println(l1);
+
+        double d1 = 1.123456789;
+        float f1 = 1.12345689F;
+
+        System.out.println(d1);
+        System.out.println(f1);
+
+        double d2 = 1.5224558844567889;
+        System.out.println(d2);
+
+        char c1 = 'B';
+        char c2 = '\u0041';
+        char c3 = 12;
+
+        System.out.println(c2);
+
+        // tipuri de date compuse (referinta): String
+
+        String text = "test";
+        System.out.println(text.length());
+        System.out.println("JavaCourse".substring(0, 4));
+
+
+        System.out.println( "text".indexOf('t'));
+        System.out.println( "text".lastIndexOf('t'));
+        System.out.println( "text".indexOf('g'));
+
+        char[] charArray = "text".toCharArray();
+        System.out.println(charArray);
 
     }
 }
