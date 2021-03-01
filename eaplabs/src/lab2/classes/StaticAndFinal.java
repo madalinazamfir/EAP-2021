@@ -2,6 +2,10 @@ package lab2.classes;
 
 public class StaticAndFinal {
 
+    public static String campStatic;
+    public final static String CAMP_STATIC = "text";
+
+
     // un camp/metoda statica este accesibila fara a crea un obiect in felul urmator "NumeClasa.numeField/numeMetoda"
     static String staticFiel = "I am a static field";
 
