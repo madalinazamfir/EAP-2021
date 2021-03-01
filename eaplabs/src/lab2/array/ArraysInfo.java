@@ -18,6 +18,7 @@ public class ArraysInfo {
         //tablou anonim
         method(new int[]{1, 5, 3});
 //        jskjdks
+        //second commit
 
         // tablouri multidimensionale
         int[][] bidimensional = new int[4][];
