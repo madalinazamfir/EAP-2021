@@ -48,6 +48,6 @@ Teme sugerate
 5) aplicatie bancara (conturi,extras de cont, tranzactii, carduri, servicii)
 6) platforma e-learning(cursuri, utilizatori, cursanti, quizuri)
 7) sistem licitatii (licitatii, bids, produse, utilizatori)
-8) platforma food delivery(localuri, comenzi, soferi, useri) - poate putin complexa
+8) platforma food delivery(localuri, comenzi, soferi, useri)
 9) platforma imprumuturi carti - tip bookster (companii afiliate, abonament, utilizatori, carti)
 
