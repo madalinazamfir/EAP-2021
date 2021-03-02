@@ -1,7 +1,8 @@
 Fiecare student va lucra la un proiect individual. Proiectul este structurat în mai multe etape. Condiția de punctare a proiectelor:
 
-să nu prezinte erori de compilare
-să se implementeze cerințele date.
+- să nu prezinte erori de compilare
+- să se implementeze cerințele date.
+
 Termene de predare:
 
 - Etapa I​: 31 martie 2021
