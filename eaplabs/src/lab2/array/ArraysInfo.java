@@ -8,7 +8,7 @@ public class ArraysInfo {
 
         // doua feluri de initializare arrays
         // la creare se stabileste numarul de elemente, si nu poate fi schimbat pe parcursul executiei
-        // elementele vor fi initializate cu valoarea default a tipului de date
+        // elementele vor fi initializate cu valoarea default a tipului de date: 0 - primitive numerice, null - referinte, false - boolean
 
         int[] intArrayWithNew = new int[5];// un array cu 5 de 0 - default-ul tipului de date integer
         int[] intArrayWithBraces = {1, 2, 3};
@@ -82,8 +82,31 @@ public class ArraysInfo {
 
         //Exercitiu: sa se afiseze elementele duplicate din fiecare tablou
             int[][] elements = {{1, 5, 6, 8, 5}, {1, 8, 9, 8, 1}, {2, 3, 5, 2}};
+            // implementare 1 - Alexandru Nicoi
 
-
+        for(int[] row1: elements) {
+            Arrays.sort(row1);
+            boolean ok = false;
+            for(int j = 1; j< row1.length; j++) {
+                if(row1[j] == row1[j-1] && !ok) {
+                    System.out.println(row1[j] + " ");
+                    ok = true;
+                } else if(row1[j] != row1[j-1]) {
+                    ok = false;
+                }
+            }
+        }
+        // implementare 2
+        String duplicates = "";
+        for (int i = 0; i < elements.length; i++) {
+            Arrays.sort(elements[i]);
+            for(int j = 0; j < elements[i].length; j++) {
+                if (j+1< elements[i].length && elements[i][j] == elements[i][j+1]){
+                    duplicates = duplicates.concat(String.valueOf(elements[i][j]).concat(","));
+                }
+            }
+        }
+        System.out.println(Arrays.toString(duplicates.split(","))); // split intoarce un array de String dupa ce a impartit stringul dupa caracterul ","
     }
 
     public static int[] method(int[] array) {
