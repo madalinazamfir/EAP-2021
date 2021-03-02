@@ -4,9 +4,10 @@ să nu prezinte erori de compilare
 să se implementeze cerințele date.
 Termene de predare:
 
-Etapa I​: 31 martie 2021
-Etapa II​: 28 aprilie 2021
-Etapa III​: 26 mai 2021
+- Etapa I​: 31 martie 2021
+- Etapa II​: 28 aprilie 2021
+- Etapa III​: 26 mai 2021
+- 
 Etapa I
 1) Definirea sistemului
 Să se creeze o lista pe baza temei alese cu cel puțin 10 acțiuni/interogări care s epot face în cadrul sistemului și o lista cu cel puțin 8 tipuri de obiecte. (se va adauga in redme.md al repository-ului)
