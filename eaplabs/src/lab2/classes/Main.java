@@ -17,6 +17,5 @@ public class Main {
         Cat tom3 = (Cat) tom2;
         tom3.getMembruPrivat();
 
-
     }
 }

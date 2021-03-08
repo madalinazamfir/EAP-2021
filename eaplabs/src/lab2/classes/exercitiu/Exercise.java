@@ -16,6 +16,6 @@ public class Exercise {
         Produs produs = new Produs(1, 20);
         produs.descriere = "ala bala";
         Cart cart = Cart.getInstance();
-//        cart.add(new Produs(10, 20), new Produs(10, 50));
+        cart.add(new Produs(10, 20), new Produs(10, 50));
     }
 }

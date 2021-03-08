@@ -1,4 +1,4 @@
-package lab2.classes;
+package lab3.abstract_class;
 
 // nu se poate instantia
 public abstract class AbstractClass {

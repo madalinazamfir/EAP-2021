@@ -6,10 +6,10 @@ public class StaticAndFinal {
     public final static String CAMP_STATIC = "text";
 
 
-    // un camp/metoda statica este accesibila fara a crea un obiect in felul urmator "NumeClasa.numeField/numeMetoda"
+    // un camp/metoda statica este accesibila fara a crea un obiect, in felul urmator "NumeClasa.numeField/numeMetoda"
     static String staticFiel = "I am a static field";
 
-    // o variabila de tip obiect, care este final nu-si mai poate schimba referinta
+    // o variabila de tip referinta, care este final nu-si mai poate schimba referinta
     final static String constanta = "I am global variable";
 
     // o variabila de tip primitiva, care este final nu-si mai poate schimba valoarea

@@ -1,7 +1,7 @@
 package lab2.classes;
 
 // make Configuration immutable
-public class Configuration {
+public final class Configuration {
 
     private final ConfigurationItem configurationItem;
 
