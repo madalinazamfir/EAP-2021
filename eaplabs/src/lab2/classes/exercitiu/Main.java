@@ -1,6 +1,6 @@
 package lab2.classes.exercitiu;
 
-public class Exercise {
+public class Main {
 
     public static void main(String[] args) {
         /* Creare magazin online:
@@ -13,9 +13,16 @@ public class Exercise {
         Fiecare produs va avea id, descriere, nume, pret - pretul si id unui produs nu se pot schimba pe parcurs
          */
 
-        Produs produs = new Produs(1, 20);
-        produs.descriere = "ala bala";
+
         Cart cart = Cart.getInstance();
-        cart.add(new Produs(10, 20), new Produs(10, 50));
+        Produs xbox = new XBox(1, 10000, "Xbox", "Xbox 3");
+        Produs playStation = new PlayStation(2, 2000, "PlayStation", "PlayStation 5");
+        Produs toaster = new Toaster(3,"Toaster", "descriere toaster", 200);
+
+        cart.add(xbox);
+        cart.add(playStation, 2);
+        cart.add(toaster, 3);
+        cart.order("online");
+        System.out.println(cart.showDetails());
     }
 }

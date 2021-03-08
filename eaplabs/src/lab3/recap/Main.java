@@ -8,7 +8,8 @@ public class Main {
         boolean esteSchior = schior instanceof Schior;
         boolean esteSportiv = schior instanceof Sportiv;
         boolean estePersoana = schior instanceof Persoana;
-        System.out.println(esteSchior + " " + esteSportiv + " " + estePersoana);
+        System.out.println(esteSchior + " " + esteSportiv + " " + estePersoana); // true true true
+//        boolean compilationError = schior instanceof String;
 
 
         // upcasting
@@ -20,8 +21,15 @@ public class Main {
         //downcasting
         Persoana persoana = new Schior("Maria", 1);
         Schior schior1 = (Schior) persoana;
+        System.out.println(persoana.prezentare()); // polimorfism dinamic
+
+        // downcasting gresit
+//        Schior schiorD = (Schior) new Persoana("Alexandru");
+//        schiorD.getNivelSchior(); // exceptie java.lang.ClassCastException
+        // in cazul acesta era bine sa facem instanceOf
 
         //suprapuneri
+        schior.inregistrare();
         schior.antrenament();
         System.out.println(schior.getNivelSchior());
         System.out.println(schior.getNivelParinte());

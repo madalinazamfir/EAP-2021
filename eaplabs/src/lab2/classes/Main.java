@@ -17,5 +17,14 @@ public class Main {
         Cat tom3 = (Cat) tom2;
         tom3.getMembruPrivat();
 
+
+        ConfigurationItem item = new ConfigurationItem("Item 1");
+        Configuration configuration = new Configuration(item);
+
+        item.name = "Item edit";
+
+        System.out.println(configuration.getConfigurationItem().name);
+
+
     }
 }

@@ -6,11 +6,19 @@ public class Schior extends Sportiv {
 
     protected int nivel;
 
+    protected String nume = "Schior nume";
+
     protected int olimpiadeCastigate;
 
     public Schior(String nume, int nivel) {
         super(nume, nivel);
         this.nivel = nivel;
+    }
+
+    public void inregistrare() {
+        System.out.println(this.senioritate);
+        System.out.println(super.nume + " este numele din clasa Persoana");
+        System.out.println(this.nume + " este numele din clasa Schior");
     }
 
     public void participareOlimpiada() {

@@ -17,19 +17,22 @@ public class Student {
     @Override
     // produce un nr calculat pe baza continutului obiectului. Nu este unic de la un obiect la altul, insa trebuie sa fie acelasi pentru 2 obiecte care sunt equals din pct de vedere al lui equals() din motive de performanta - mai multe detalii la colectii
     public int hashCode() {
-        return super.hashCode();
+        return id;
     }
 
     @Override
     // implementarea originala compara referintele
     public boolean equals(Object obj) {
-        return super.equals(obj);
+        if(obj instanceof Student) {
+            return id == ((Student) obj).id;
+        }
+        return false;
     }
 
     @Override
     // implementarea originala produce un String de forma tipDeData@hashCode
     public String toString() {
-        return super.toString();
+        return "Student cu numele: " + this.name;
     }
 
     public int getId() {

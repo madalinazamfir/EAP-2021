@@ -5,7 +5,7 @@ public class Payment {
     private Payment() {
     }
 
-    final static String online = "online";
-    final static String cash = "cash";
+    public final static String online = "online";
+    public final static String cash = "cash";
 }
 
