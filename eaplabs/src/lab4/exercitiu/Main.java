@@ -1,5 +1,9 @@
 package lab4.exercitiu;
 
+import lab4.exercitiu.dto.FormRegistration;
+import lab4.exercitiu.service.FormValidation;
+import lab4.exercitiu.service.TransformService;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -24,5 +28,18 @@ public class Main {
         * se vor suprascrie metodele toString din fiecare clasa DTO (Data transfer object)/ POJO (Plain old java object)
         */
 
+        FormRegistration registration = new FormRegistration();
+        registration.setName("Popescu-Georgescu");
+        registration.setEmail("popescu_george@mail.com");
+        registration.setPhone("0712345678");
+        registration.setCity("Brasov");
+
+
+        FormValidation validationService = new FormValidation();
+        boolean isValid = validationService.validateCountry(registration.getCity());
+        System.out.println(isValid);
+
+        TransformService transformService = new TransformService();
+        System.out.println(transformService.capitalizeFirstLetter(registration.getName()));
     }
 }
