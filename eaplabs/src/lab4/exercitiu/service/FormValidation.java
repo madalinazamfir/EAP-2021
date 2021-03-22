@@ -24,7 +24,7 @@ public class FormValidation {
         return true;
     }
 
-    public boolean validateCountry(String country) {
+    public boolean validateCity(String country) {
         boolean exists = false;
         for (String city: countries) {
             if(city.equalsIgnoreCase(country)) {

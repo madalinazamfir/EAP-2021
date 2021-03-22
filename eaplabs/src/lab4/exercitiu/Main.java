@@ -36,7 +36,7 @@ public class Main {
 
 
         FormValidation validationService = new FormValidation();
-        boolean isValid = validationService.validateCountry(registration.getCity());
+        boolean isValid = validationService.validateCity(registration.getCity());
         System.out.println(isValid);
 
         TransformService transformService = new TransformService();
