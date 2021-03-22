@@ -1,7 +1,5 @@
 package lab4.exercitiu.dto;
 
-import lab3.Object_methods.Student;
-
 public class FormRegistration {
 
     private String name;
@@ -71,8 +69,16 @@ public class FormRegistration {
     @Override
     public String toString() {
         StringBuilder message = new StringBuilder();
-        message.append("FormRegistration{name=")
-                .append(name);
+        message.append("name=")
+                .append(name)
+                .append(", surname=")
+                .append(surname)
+                .append(", phone=")
+                .append(phone)
+                .append(", email=")
+                .append(email)
+                .append(", city=")
+                .append(city);
         return message.toString();
     }
 }
