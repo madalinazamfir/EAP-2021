@@ -14,6 +14,7 @@ public class ClassInterfaceComparison extends Parent implements InterfaceExample
     // poate fi suprascrisa in copil
     @Override
     public String thisIsAValidMethodWithImplementation() {
-        return null;
+       return InterfaceExample.super.thisIsAValidMethodWithImplementation() +
+                ". I was a default method in the interface but now but now I am overridden";
     }
 }

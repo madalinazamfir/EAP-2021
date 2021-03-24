@@ -11,5 +11,8 @@ public class Main {
         comparison.thisIsAValidMethodWithImplementation();
         String staticFieldFromInterface = InterfaceExample.variable;
         String staticMethodFromInterface = InterfaceExample.thisIsAStaticMethod();
+
+        System.out.println(comparison instanceof InterfaceExample); // true
+
     }
 }

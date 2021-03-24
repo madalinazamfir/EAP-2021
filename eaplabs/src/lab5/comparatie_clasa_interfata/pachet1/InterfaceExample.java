@@ -16,7 +16,7 @@ public interface InterfaceExample {
         return "I am an implemented method in an interface";
     }
 
-    public static String thisIsAStaticMethod() {
+    static String thisIsAStaticMethod() {
         return "I am a static method in an interface";
     }
 

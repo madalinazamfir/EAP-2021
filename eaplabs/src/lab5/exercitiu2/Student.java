@@ -1,10 +1,14 @@
 package lab5.exercitiu2;
 
-public class Student {
+public class Student implements Cloneable, Comparable<Student>, Identifiable{
 
     private String id;
     private String name;
     private int year;
+
+    public Student() {
+        this.id = generateId();
+    }
 
     public String getName() {
         return name;
@@ -34,5 +38,15 @@ public class Student {
     @Override
     protected Object clone() throws CloneNotSupportedException {
         return super.clone();
+    }
+
+    @Override
+    public int compareTo(Student o) {
+        return o.name.compareTo(this.name);
+    }
+
+    @Override
+    public String getId() {
+        return this.id;
     }
 }

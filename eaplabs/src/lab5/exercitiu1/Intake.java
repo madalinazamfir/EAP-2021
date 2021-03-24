@@ -1,6 +1,6 @@
 package lab5.exercitiu1;
 
-public class Intake {
+public class Intake implements Notifiable{
 
     private int amount;
     private String from;
@@ -24,5 +24,10 @@ public class Intake {
 
     public void setFrom(String from) {
         this.from = from;
+    }
+
+    @Override
+    public String getNotificationMessage() {
+        return "Suma de " + amount + "de la" + from + " a fost virata in contul dvs";
     }
 }

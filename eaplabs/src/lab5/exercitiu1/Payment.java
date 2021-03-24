@@ -1,6 +1,6 @@
 package lab5.exercitiu1;
 
-public class Payment {
+public class Payment implements Notifiable{
 
     private int amount;
     private String to;
@@ -24,5 +24,10 @@ public class Payment {
 
     public void setTo(String to) {
         this.to = to;
+    }
+
+    @Override
+    public String getNotificationMessage() {
+        return "S-a efectuat o plata in valoare de " + amount + " catre contul " + to;
     }
 }

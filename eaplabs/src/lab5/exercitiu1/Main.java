@@ -1,5 +1,9 @@
 package lab5.exercitiu1;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -15,6 +19,7 @@ public class Main {
         myAccount.pay(20, "RO04RZBR9629448399233658");
         myAccount.receive(200, "RO97RZBR2655429746674587");
         myAccount.openDeposit("Savings", "RON");
+
 
     }
 }

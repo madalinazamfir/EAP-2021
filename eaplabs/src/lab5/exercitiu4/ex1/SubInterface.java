@@ -6,8 +6,8 @@ public interface SubInterface extends SuperInterface{
     // devine abstracta - clasa care va implementa SubInterface va trebui sa implementeze ambele metode
     String defaultMethod();
 
-//    @Override
-//    default String defaultMethodWithNoMatchingInSubInterface() {
-//        return SuperInterface.super.defaultMethodWithNoMatchingInSubInterface() + ". I was reimplemented in SubInterface";
-//    }
+    @Override
+    default String defaultMethodWithNoMatchingInSubInterface() {
+        return SuperInterface.super.defaultMethodWithNoMatchingInSubInterface() + ". I was reimplemented in SubInterface";
+    }
 }

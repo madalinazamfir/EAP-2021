@@ -1,6 +1,5 @@
 package lab5.exercitiu3.ex;
 
-import java.util.Arrays;
 import java.util.Random;
 
 public class ProductService {
@@ -9,6 +8,14 @@ public class ProductService {
 
     public ProductService() {
         this.initProducts();
+    }
+
+    public Product[] getOriginal() {
+        return products;
+    }
+
+    public Product[] filterBy(FilterProduct filter, Object value) {
+        return filter.filter(products, value);
     }
 
 

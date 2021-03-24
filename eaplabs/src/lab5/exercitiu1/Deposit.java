@@ -1,6 +1,6 @@
 package lab5.exercitiu1;
 
-public class Deposit {
+public class Deposit implements Notifiable{
 
     private String name;
     private String currency;
@@ -24,5 +24,10 @@ public class Deposit {
 
     public void setCurrency(String currency) {
         this.currency = currency;
+    }
+
+    @Override
+    public String getNotificationMessage() {
+        return "Ai deschis un nou cont in "+ currency + " cu numele " + name;
     }
 }
