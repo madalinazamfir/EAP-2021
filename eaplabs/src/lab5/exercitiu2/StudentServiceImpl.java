@@ -6,7 +6,7 @@ import java.util.Random;
 
 public class StudentServiceImpl implements StudentService{
 
-    Student [] students = new Student [10];
+    Student[] students = new Student [10];
 
     public StudentServiceImpl() {
         initStudents();

@@ -1,5 +1,7 @@
 package lab6.exceptii.exercitiu.service;
 
+import java.io.IOException;
+
 public interface AuthService {
 
     // sa arunce o exceptie WrongCredentialsException
@@ -7,6 +9,8 @@ public interface AuthService {
 
     // sa arunce ResourceNotFoundException sau UserNotAuthorizedException
     public void accessResource(String resource);
+
+    public void checkedExample() throws Exception;
 
     /* Mostenirea si exceptiile declarate in semnatura
      In cazul exceptiilor checked subclasa care suprascrie o metoda nu are voie sa:

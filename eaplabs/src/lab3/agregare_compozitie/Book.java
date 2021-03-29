@@ -7,6 +7,7 @@ public class Book {
     private Gender gender; // Agregare
     private int currentPage = 0;
 
+
     public Book(String name, int noOfPages, Gender gender) {
         this.name = name;
         this.gender = gender;
@@ -16,6 +17,12 @@ public class Book {
     public void addPage(String content) {
         Page page = new Page(currentPage, content);
         pages[currentPage] = page;
+    }
+
+    public void editPage(int no, String content) {
+        Page page = pages[no];
+        page.setContent(content);
+        pages[no]  = page;
     }
 
     public Page[] getPages() {

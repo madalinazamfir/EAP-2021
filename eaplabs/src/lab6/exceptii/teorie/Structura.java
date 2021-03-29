@@ -18,15 +18,16 @@ public class Structura {
                 -> ex: IOException, SQLException
                 -> trebuie tratate sau propagate mai departe in semnatura metodei
      */
-    public void openFile() throws FileNotFoundException {
+    public static void openFile() throws FileNotFoundException {
         File filePath = new File("/non-existing.txt");
         RandomAccessFile file = new RandomAccessFile(filePath, "r");
     }
 
     public static void openFileWithTryCatch() {
         File filePath = new File("../non-existing.txt");
+        RandomAccessFile file = null;
         try {
-            RandomAccessFile file = new RandomAccessFile(filePath, "r");
+            file = new RandomAccessFile(filePath, "r");
         } catch (FileNotFoundException e) {
             System.out.println("Cannot open file");
             return;
@@ -52,6 +53,11 @@ public class Structura {
         }
      */
 
+    public static void nullPoiter() {
+        String value = null;
+        value.length();
+    }
+
     public static void openExistingFile(){
         RandomAccessFile file = null;
         try {
@@ -61,6 +67,8 @@ public class Structura {
         } catch (FileNotFoundException e) {
             System.out.println("Cannot find file");
         } catch (IOException e) {
+            e.getMessage();
+            e.printStackTrace();
             System.out.println("Cannot open file");
         } finally {
             System.out.println("No exception but i was still executed");
@@ -93,7 +101,6 @@ public class Structura {
     }
 
     public static void main(String[] args) {
-//        openFileWithTryCatch();
-        openExistingFile();
+        openExistingFileTheRightWay();
     }
 }

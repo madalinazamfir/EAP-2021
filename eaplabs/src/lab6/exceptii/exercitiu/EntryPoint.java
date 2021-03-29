@@ -1,5 +1,12 @@
 package lab6.exceptii.exercitiu;
 
+import lab6.exceptii.exercitiu.exception.ResourceNotFoundException;
+import lab6.exceptii.exercitiu.exception.UnauthorizedException;
+import lab6.exceptii.exercitiu.exception.UserNotAuthorizedException;
+import lab6.exceptii.exercitiu.exception.WrongCredentialsException;
+import lab6.exceptii.exercitiu.service.AuthService;
+import lab6.exceptii.exercitiu.service.AuthServiceImpl;
+
 public class EntryPoint {
 
     /*
@@ -15,6 +22,17 @@ public class EntryPoint {
      */
 
     public static void main(String[] args) {
+        AuthService authService = new AuthServiceImpl();
+        try {
+//            authService.login();
+            authService.accessResource("/settins");
+        } catch (UnauthorizedException e) {
+            System.out.println("Unauthorized " + e.getCode());
+        } catch (ResourceNotFoundException e) {
+            System.out.println("Not found " + e.getCode());
+        } catch (RuntimeException e) {
+            System.out.println("Something went wrong");
 
+        }
     }
 }
