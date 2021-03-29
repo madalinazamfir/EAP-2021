@@ -1,7 +1,5 @@
 package lab6.exceptii.exercitiu.exception;
 
-import lab6.exceptii.exercitiu.dto.User;
-
 public class ResourceNotFoundException extends RuntimeException{
 
     private int code;
