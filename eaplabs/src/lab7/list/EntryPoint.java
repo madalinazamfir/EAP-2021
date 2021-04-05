@@ -29,7 +29,7 @@ public class EntryPoint {
         itemsInArrayList.add(item1);
         itemsInArrayList.add(item1);
         itemsInArrayList.add(item2);
-        System.out.println(itemsInArrayList.size()); // 3
+        System.out.println(itemsInArrayList.size());
         System.out.println(itemsInArrayList.get(2));
 
         // TODO LinkedList
@@ -39,6 +39,7 @@ public class EntryPoint {
         itemsInALinkedList.add(item2);
         itemsInALinkedList.add(item1);
         itemsInALinkedList.add(item2);
+        itemsInALinkedList.add(0, item2);
         itemsInALinkedList.remove(3);
         itemsInALinkedList.sort(new ItemComparatorById());
         System.out.println(itemsInALinkedList);
