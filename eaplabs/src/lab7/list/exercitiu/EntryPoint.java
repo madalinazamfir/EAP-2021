@@ -19,7 +19,7 @@ Sa se creeze un serviciu prin care se gestioneaza ToDoItems:
 
         ToDoService service = new ToDoService();
         service.add(item2);
-//        service.addFirst(item1);
+        service.addFirst(item1);
         System.out.println(service.showUnsolved());
 
         service.resolve(item2);

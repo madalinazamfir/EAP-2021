@@ -4,13 +4,12 @@ import lab7.list.exercitiu.dto.ToDoItem;
 import lab7.list.exercitiu.exeption.ItemAlreadyExistsException;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
 public class ToDoService {
 
-    List<ToDoItem> unsolvedToDos = new LinkedList<>();
+    LinkedList<ToDoItem> unsolvedToDos = new LinkedList<>();
     List<ToDoItem> solvedToDos = new ArrayList<>();
 
     public void add(ToDoItem item) {
@@ -21,14 +20,9 @@ public class ToDoService {
         }
     }
 
-//    public void addFirst(ToDoItem item) {
-//        List<ToDoItem> copy = new LinkedList<>();
-//        Collections.copy(copy, unsolvedToDos);
-//        List<ToDoItem> newToDoList = new LinkedList<>();
-//        newToDoList.add(0, item);
-//        newToDoList.addAll(copy);
-//        unsolvedToDos = newToDoList;
-//    }
+    public void addFirst(ToDoItem item) {
+        unsolvedToDos.addFirst(item);
+    }
 
     public void resolve(ToDoItem item) {
         if(!unsolvedToDos.contains(item)) {
