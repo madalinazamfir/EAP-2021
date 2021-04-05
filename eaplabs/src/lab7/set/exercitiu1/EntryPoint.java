@@ -1,5 +1,8 @@
 package lab7.set.exercitiu1;
 
+import lab7.set.exercitiu1.dto.Bug;
+import lab7.set.exercitiu1.serviciu.BugService;
+
 public class EntryPoint {
 
     /*
@@ -13,6 +16,13 @@ public class EntryPoint {
      */
 
     public static void main(String[] args) {
+        Bug bug1 = new Bug("bug critic", 1);
+        Bug bug2 = new Bug("bug moderate", 2);
+        Bug bug3 = new Bug("bug mic", 3);
 
+        BugService bugService = new BugService();
+        bugService.add(bug1, bug2, bug3);
+
+        System.out.println(bugService.getAll());
     }
 }

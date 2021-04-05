@@ -44,7 +44,7 @@ public class EntryPoint {
         // mai lent
         // obiectele adaugate intr un TreeSet trebuie sa implementeze interfata Comparable
 
-//        treeSetExample(item1, item2, item3);
+        treeSetExample(item1, item2, item3);
     }
 
     private static void treeSetExample(Item item1, Item item2, Item item3) {
@@ -56,6 +56,7 @@ public class EntryPoint {
         for (Object item: itemsInATreeSet) {
             System.out.println(item);
         }
+        System.out.println("breakpoint");
 
         TreeSet itemsInATreeSetWithCompare = new TreeSet(new ItemComparatorById());
         itemsInATreeSetWithCompare.add(item1);
@@ -89,6 +90,7 @@ public class EntryPoint {
         itemsInAHashSet.add(item1);
         itemsInAHashSet.add(item2);
         itemsInAHashSet.add(item3);
+        itemsInAHashSet.add("alabala"); // rolul genericelor este de a restrictiona obiectele adaugate in colectie
         itemsInAHashSet.addAll(Arrays.asList(item1));
 
         System.out.println(itemsInAHashSet.add(item1)); // returns false pentru ca item1 a fost deja adaugat

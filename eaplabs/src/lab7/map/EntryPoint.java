@@ -17,6 +17,7 @@ public class EntryPoint {
         - nu sunt permise key duplicate
      Implementari:
         - HashMap
+        - TreeMap
      */
 
     public static void main(String[] args) {
