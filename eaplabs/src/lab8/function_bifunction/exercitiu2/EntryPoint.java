@@ -14,6 +14,9 @@ public class EntryPoint {
      */
 
     public static void main(String[] args) {
-
+    String text = "<h1>   This is the title </h1>";
+        ExtractService service = new ExtractService();
+        System.out.println(service.extractStringFromHtml(text));
+        System.out.println(service.extractWithCompose(text));
     }
 }

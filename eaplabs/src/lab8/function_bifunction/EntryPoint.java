@@ -3,11 +3,14 @@ package lab8.function_bifunction;
 import lab8.function_bifunction.functional_interface.Add1FunctionalInterface;
 import lab8.function_bifunction.functional_interface.SumFunctionalInterface;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.function.BiFunction;
 import java.util.function.BinaryOperator;
 import java.util.function.Function;
 import java.util.function.IntFunction;
 import java.util.function.UnaryOperator;
+import java.util.stream.Collectors;
 
 public class EntryPoint {
 
@@ -37,7 +40,8 @@ public class EntryPoint {
         System.out.println(sumFunctionalInterface.sum(10, 5));
 
         // lambda expression
-        SumFunctionalInterface sumLambdaExpression = (parameter1, parameter2) -> parameter2 + parameter1;
+        SumFunctionalInterface sumLambdaExpression = (Integer parameter1, Integer parameter2) -> parameter2 + parameter1;
+//        SumFunctionalInterface sumLambdaExpression = (Integer parameter1, Integer parameter2) -> Integer.sum(parameter1, parameter2);
         // sau
         SumFunctionalInterface sumLambdaExpression2 = Integer::sum;
         System.out.println(sumLambdaExpression.sum(5, 8));
@@ -72,5 +76,7 @@ Java 8 provides 40+ common predefined functional interfaces . All of them except
 Consumer FI are pure functions.
          */
 
+        List<String> names = Arrays.asList("madalina", "cristina");
+        names.stream().map(name -> name.toUpperCase()).collect(Collectors.toList());
     }
 }
