@@ -1,5 +1,5 @@
 DELIMITER $$
-CREATE FUNCTION deactivate_user (i_email varchar(20))
+CREATE FUNCTION user_entitlement.deactivate_user (i_email varchar(20))
     RETURNS int
     DETERMINISTIC
 BEGIN
