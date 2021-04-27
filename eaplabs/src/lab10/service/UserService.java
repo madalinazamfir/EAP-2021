@@ -3,6 +3,7 @@ package lab10.service;
 import lab10.dto.User;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Vector;
 import java.util.stream.Collectors;
@@ -23,6 +24,7 @@ public class UserService {
         return userService;
     }
 
+    //
     public Vector<Vector<String>> getAll() {
         Vector<Vector<String>> all = new Vector<>();
         this.users.stream()
@@ -36,6 +38,7 @@ public class UserService {
         return this.users.stream()
                 .filter(user -> user.getEmail().equalsIgnoreCase(email))
                 .collect(Collectors.toList());
+
     }
 
     public void delete(int index) {
