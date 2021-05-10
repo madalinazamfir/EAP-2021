@@ -12,14 +12,27 @@ public class AuthorizationService {
 
     private List<User> usersInSystem = new ArrayList<>();
     private User loggedInUser;
+    private static AuthorizationService instance;
 
-    public AuthorizationService() {
+    private AuthorizationService() {
         this.initData();
+    }
+
+    public static AuthorizationService getInstance() {
+        if(instance == null) {
+            instance = new AuthorizationService();
+            return instance;
+        }
+        return instance;
     }
 
     // daca se gaseste userul se inregistreaza "sesiunea", daca nu se arunca exceptie de Unauthorized cu mesajul  "Username and password invalid"
     public void login(String username, String password) {
-
+        usersInSystem.stream()
+                .filter(user -> user.getEmail().equals(username) && user.getPassword().equals(password))
+                .findAny()
+                .map(foundUser -> loggedInUser = foundUser)
+                .orElseThrow(() -> new UnauthorizedException("Username and password invalid"));
     }
 
     public void logout() {
@@ -27,7 +40,7 @@ public class AuthorizationService {
     }
 
     public String getLoggedInUsername() {
-        if(loggedInUser != null) {
+        if (loggedInUser != null) {
             return loggedInUser.getEmail();
         }
         throw new UnauthorizedException("You are not authorized. Please log in.");

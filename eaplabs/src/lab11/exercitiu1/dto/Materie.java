@@ -21,4 +21,12 @@ public class Materie {
     public void setMedie(float medie) {
         this.medie = medie;
     }
+
+    @Override
+    public String toString() {
+        return "Materie{" +
+                "nume=" + nume +
+                ", medie=" + medie +
+                '}';
+    }
 }

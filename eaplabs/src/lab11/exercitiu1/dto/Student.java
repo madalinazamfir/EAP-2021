@@ -26,4 +26,12 @@ public class Student {
         }
 
     }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "nume='" + nume + '\'' +
+                ", materii=" + materii +
+                '}';
+    }
 }

@@ -53,4 +53,14 @@ public class Mail {
     public void setContent(String content) {
         this.content = content;
     }
+
+    @Override
+    public String toString() {
+        return "Mail{" +
+                "from='" + from + '\'' +
+                ", to='" + to + '\'' +
+                ", isRead=" + isRead +
+                ", title='" + title + '\'' +
+                '}';
+    }
 }
