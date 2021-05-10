@@ -1,6 +1,6 @@
 package lab10.ui;
 
-import com.mysql.cj.util.StringUtils;
+//import com.mysql.cj.util.StringUti\ls;
 import lab10.dto.User;
 import lab10.service.PermissionService;
 import lab10.service.UserService;
@@ -129,10 +129,10 @@ public class AddUserFrame extends JFrame {
     }
 
     private void enableSaveButton() {
-        if (!StringUtils.isNullOrEmpty(name) && !StringUtils.isNullOrEmpty(email)) {
-            saveButton.setEnabled(true);
-        } else {
-            saveButton.setEnabled(false);
-        }
+//        if (!StringUtils.isNullOrEmpty(name) && !StringUtils.isNullOrEmpty(email)) {
+//            saveButton.setEnabled(true);
+//        } else {
+//            saveButton.setEnabled(false);
+//        }
     }
 }
