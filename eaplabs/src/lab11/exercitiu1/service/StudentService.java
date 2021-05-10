@@ -58,6 +58,23 @@ public class StudentService {
 
     //lista studentilor ordonata in functie de medie pentru o anumita materie
 
+    public List<Student> studentiOrdonati (MaterieNumeEnum materie) {
+        List <Student> studentiOrdonati =
+        students.stream()
+                .sorted((s1, s2) -> {
+                    Materie materieStudent1 = s1.getMaterii().stream()
+                                                    .filter(m -> m.getNume().equals(materie))
+                                                    .findFirst().get();
+                    Materie materieStudent2 = s2.getMaterii().stream()
+                            .filter(m -> m.getNume().equals(materie))
+                            .findFirst().get();
+                   return ((Float)materieStudent2.getMedie()).compareTo(materieStudent1.getMedie());
+                })
+
+                .collect(Collectors.toList());
+        return studentiOrdonati;
+    }
+
     private void initData() {
         Student studentPopescu = new Student();
         studentPopescu.setNume("Popescu Anghel");
