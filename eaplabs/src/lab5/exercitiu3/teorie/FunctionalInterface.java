@@ -9,11 +9,11 @@ public interface FunctionalInterface {
     default void sayHello() {
         System.out.println("Hello");
     }
-
+/*
     private void sayHelloButLikeAnIntrovert() {
         System.out.println("hi");
     }
-
+*/
     public static void sayHelloLikeYouDontCare() {
         System.out.println("HELLO WORLD");
     }

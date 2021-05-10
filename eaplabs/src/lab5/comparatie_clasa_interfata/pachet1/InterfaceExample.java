@@ -20,7 +20,7 @@ public interface InterfaceExample {
         return "I am a static method in an interface";
     }
 
-    // incepand cu java 9
+   /* // incepand cu java 9
     private String thisIsAPrivateMethod() {
         return "I am a private method in an interface";
     }
@@ -28,4 +28,6 @@ public interface InterfaceExample {
     private static String thisIsAPrivateAndStaticMethod() {
         return "I am a private and also static method in an interface";
     }
+
+    */
 }
