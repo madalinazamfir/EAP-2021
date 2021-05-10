@@ -3,6 +3,7 @@ package lab11.teorie;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class StreamOperations {
@@ -67,8 +68,13 @@ public class StreamOperations {
         // #### METODE DE INCHIDERE ####
         numbers.stream().max(Comparator.naturalOrder()).get(); // output 8
 
-        numbers.stream().reduce(0,(accumulator, nextInt) -> accumulator + nextInt); // output: 31
+        Integer x =numbers.stream().reduce(0,(accumulator, nextInt) -> accumulator + nextInt); // output: 31
+        Optional<Integer> y = numbers.stream().reduce((accumulator, nextInt) -> accumulator + nextInt); // output: 31
 
         numbers.stream().anyMatch(number -> number == 3);
+    }
+
+    private static void doNothing(Integer number) {
+
     }
 }

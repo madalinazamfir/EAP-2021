@@ -15,12 +15,15 @@ public class StudentService {
 
     private List<Student> students = new ArrayList<>();
 
+    public StudentService() {
+        this.initData();
+    }
+
     // absolvire - doar studentii care au trecut la toate materiile
     //  Sa intoarca o lista de absolventi cu .map
-    public List <Absolvent> graduate () {
+    public List<Absolvent> graduate() {
         return students.stream()
-                .filter(s -> s.getMaterii().stream()
-                        .anyMatch(m -> m.getMedie() < 5))
+                .filter(s -> s.getMaterii().stream().allMatch(materie -> materie.getMedie() >= 5))
                 .map(s -> {
                     Absolvent a = new Absolvent();
                     a.setNume(s.getNume());
@@ -33,20 +36,24 @@ public class StudentService {
 
     //media generala pentru un student cu numele x
 
-    public float medie (String student) {
+    public float medie(String student) {
         Optional<Student> found =
-        students.stream()
-                .filter(s -> s.getNume() == student)
-                .findAny();
+                students.stream()
+                        .filter(s -> s.getNume() == student)
+                        .findAny();
 
         int nrMAterii =
                 found
-                    .map(s -> s.getMaterii().size()).orElseThrow(() -> new RuntimeException("Nu s-a gasit studentul"));
+                        .map(s -> s.getMaterii().size()).orElseThrow(() -> new RuntimeException("Nu s-a gasit studentul"));
 
-        float suma =
-                found
-                    .map(s -> s.getMaterii().stream().map(m -> m.getMedie()).count()).orElseThrow(() -> new RuntimeException("Nu s-a gasit studentul"));
-        return suma/nrMAterii;
+        // presupunem ca media este notNull (chiar daca noi in exercitiu nu ne am asigurat)
+        float suma = found
+                .map(s -> s.getMaterii().stream()
+                        .map(m -> m.getMedie())
+                        .reduce((acc, next) -> acc + next)
+                        .get())
+                .orElseThrow(() -> new RuntimeException("Nu s-a gasit studentul"));
+        return suma / nrMAterii;
     }
 
     //lista studentilor ordonata in functie de medie pentru o anumita materie
