@@ -43,7 +43,7 @@ public class EntryPoint {
     public static void copyTextWithBuffer() throws IOException {
         BufferedInputStream bufferedInputStream = new BufferedInputStream(new FileInputStream(RESOURCES_FOLDER + "\\lorem_ipsum.txt"));
         BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(new FileOutputStream(COPY_FOLDER + "\\copy_lorem.txt"));
-        bufferedOutputStream.write(bufferedInputStream.readAllBytes());
+//        bufferedOutputStream.write(bufferedInputStream.readAllBytes());
         bufferedOutputStream.flush();
         bufferedOutputStream.close();
         bufferedInputStream.close();
